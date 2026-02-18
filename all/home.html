@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDWG</title>
+    <style>
+        /* Общие сбросы и базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Контейнер для ограничения ширины */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+            border-bottom: 2px solid #ffd700;
+        }
+
+        /* Главный контент */
+        main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Карточки */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Подвал */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Небольшой приветственный скрипт */
+        .welcome-message {
+            background: #e0f7fa;
+            border-left: 5px solid #0097a7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">SDWG<span></span></div>
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\S0RCT\Desktop\Текстовый документ.html">Главная</a></li>
+                    <li><a href="C:\Users\S0RCT\Desktop\Текстовый докут.html">О нас</a></li>
+                    <li><a href="C:\Users\S0RCT\Desktop\вый документ.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Приветственное сообщение (динамическое) -->
+            <div class="welcome-message" id="welcomeMessage">
+                 Привет! Это сайт голосового помощника: Миши
+            </div>
+
+            <h1> Мы развиваем технологии голосового помощника</h1>
+            <p class="subtitle">наш продукт создан для повышения качества жизни в Российской Федерации и является бесплатным продуктом с открытым исходным кодом </p>
+
+            <div class="cards">
+                <div class="card">
+                    <h2>Скачать продукт</h2>
+                    <p>наш продукт поддерживается на операционых системах windows 10 и выше</p>
+                    <a href="https://github.com/Wolly686/project" class="btn" target="_blank">Подробнее</a>
+                </div>
+                <div class="card">
+                    <h2>Поддержать разработку</h2>
+                    <p>Для ускорения выхода обновлений и усовершенствования голосового ассистента</p>
+                    <a href="https://boosty.to/sdwg" class="btn" target="_blank">Подробнее</a>
+                </div>
+                <div class="card">
+                    <h2>Принять участие в разработке</h2>
+                    <p>Если вы желаете присоединиться к команде разроботчиков заполните анкету</p>
+                    <a href="https://forms.yandex.ru/u/699590dfd0468824480ee0ed" class="btn" target="_blank">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Простой скрипт для динамики -->
+    <script>
+        // Пример небольшого взаимодействия: при клике на карточку появляется сообщение в консоли
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                console.log('Вы кликнули на карточку:', card.querySelector('h2').innerText);
+            });
+        });
+
+        // Можно добавить приветствие в зависимости от времени суток
+        const welcome = document.getElementById('welcomeMessage');
+        const hour = new Date().getHours();
+        let greeting = '';
+        if (hour < 12) greeting = 'Доброе утро';
+        else if (hour < 18) greeting = 'Добрый день';
+        else greeting = 'Добрый вечер';
+
+        welcome.innerHTML = ${greeting}! Приятного просмотра!;
+    </script>
+</body>
+</html>
